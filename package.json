@@ -1,0 +1,11 @@
+{
+  "name": "fs-cache",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.coffee",
+  "author": "bender@false.cz",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "~0.3.5"
+  }
+}
