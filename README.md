@@ -1,6 +1,6 @@
 # Streamable filesystem cache
 
-```bash npm install fs-cache```
+```npm install fs-cache```
 
 ### Usage
 
