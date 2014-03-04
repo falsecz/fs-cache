@@ -35,6 +35,11 @@ module.exports = (dir) ->
 	exists: (key) ->
 		Boolean map[hash key]
 
+	invalidate: (key) ->
+		id = hash key
+		setExpire id, -1
+		updateMap()
+
 	put: (key, opts) ->
 		id = hash key
 		file = path.join dir, id
