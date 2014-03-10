@@ -33,7 +33,12 @@ module.exports = (dir) ->
 		updateMap()
 
 	exists: (key) ->
-		Boolean map[hash key]
+		return no unless map[hash key]
+		try
+			fs.statSync map[hash key]
+			return yes
+		catch e
+			return no
 
 	invalidate: (key) ->
 		id = hash key
