@@ -35,9 +35,10 @@ module.exports = (dir) ->
 	exists: (key) ->
 		return no unless map[hash key]
 		try
-			fs.statSync map[hash key]
+			fs.statSync path.join(dir, hash key)
 			return yes
 		catch e
+			@invalidate key
 			return no
 
 	invalidate: (key) ->
